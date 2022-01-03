@@ -32,16 +32,24 @@ average temperature has been rising, especially since around 1945.
 > The `WeatherComparator` is a program written in Haskell. It creates 
 the moving averages based on two csv files that need to have the 
 headings `year` and `avg_temp` (see examples in the [data folder](https://github.com/amxyz-cyber/weather-project/tree/master/data)).
+Please note that the source csv files may contain additional headings but
+these two are a must. What's more, this program will only work if the
+binary `weatherComparator` together with the `data` folder are in the 
+same directory. The csv files of both regions as well as the csv file
+containing the moving averages need to be in the `data` folder. That's
+why you'll only need to enter the name of the csv files but not their
+paths.
+
 
 Usage: weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]\
-  -v          --verbose &emsp;  chatty output on stderr\
-  -V, -?      --version         show version number\
-  -q          --quit            end program\
-  -c FILES    --csv=FILES       csv file for temperature comparison\
-  -d LINK     --chart=LINK      create a diagram\
-  -t          --test            create a diagram based on test set\
-  -r REGIONS  --region=REGIONS  the name of a region\
-  -h          --help            Show this help message
+  -v          &emsp;&emsp; --verbose 		&emsp;&emsp;  chatty output on stderr\
+  -V, -?      &emsp;&emsp; --version 		&emsp;&emsp;        show version number\
+  -q          &emsp;&emsp; --quit    		&emsp;&emsp;        end program\
+  -c FILES    &emsp;&emsp; --csv=FILES 		&emsp;&emsp;      csv file for temperature comparison\
+  -d LINK     &emsp;&emsp; --chart=LINK  	&emsp;&emsp;    create a diagram\
+  -t          &emsp;&emsp; --test            &emsp;&emsp; create a diagram based on test set\
+  -r REGIONS  &emsp;&emsp; --region=REGIONS  &emsp;&emsp; the name of a region\
+  -h          &emsp;&emsp; --help            &emsp;&emsp; Show this help message
 
 > First of all, you can run this program by generating the csv file
 'moving-average-weather-data.csv' as well as the htmlfile 
@@ -65,9 +73,9 @@ and 'region2' will be used instead.
 > This repositary currently contains binaries for the Raspberry Pi 
 'aarch64' architecture as well as ia64 (https://github.com/amxyz-cyber/weather-project/tree/master/binaries).
 You will also need the haskell-platform which basically includes the
-ghc-compiler and its dependencies.
+ghc-compiler and its dependencies.\
 
-> `weatherComparator` or `./weatherComparator`
+`weatherComparator` or `./weatherComparator`
 
 ### Install the project
 1. If you want to compile the programm by yourself then please download
@@ -86,20 +94,23 @@ provided in packages.yaml is invalid then you need to upgrade stack first:\
 following command:\
 `stack exec weather-project-exe`
 
-> Note, that the stack command should be available globally. If you can
-use stack only locally, i.e. `./stack` then you need to export the path
+> Note that if you can't use the stack command globally, i.e. you can
+use stack only locally `./stack` then you can export the path
 to the folder containing its binary, for example:\
 $ `export PATH="${PATH}:/home/username/.local/bin"`
 
 > The compiled binary will be placed in a subfolder of this project 
 depending on the architecture. For example, for 'aarch64' you'll find the
-binary in: '.stack-work/dist/aarch64-linux/Cabal-3.2.1.0/build/weather-project-exe/weather-project-exe'
+binary in a path similar to this:\
+**.stack-work/dist/aarch64-linux/Cabal-3.2.1.0/build/weather-project-exe/weather-project-exe**
 
 5. To finally install the binary, you'll use the following command:\
 `stack install` 
-> This command copies the binary to your local bin folder, for example:
-'/home/username/.local/bin'. You can rename the binary by simply using
-the move command 'mv' to `weatherComparator`. This will work, too.
+> This command copies the binary to your local bin folder such as\
+**/home/username/.local/bin**\
+You can rename the binary by simply using the move command:\
+`mv weather-project-exe weatherComparator`. 
+> This will work, too.
 
 
 

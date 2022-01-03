@@ -244,7 +244,7 @@ parseArgs = do
           | Test `elem` opts = return $ (TestData,Nothing)
           | otherwise = checkAllOptions opts help
 
--- checks if the flag is of type Flag
+-- checks if the flag is of type Region
 isRegion :: Flag -> Bool
 isRegion (Region _) = True
 isRegion _         = False
