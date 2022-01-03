@@ -71,7 +71,7 @@ ghc-compiler and its dependencies.
 
 ### Install the project
 1. If you want to compile the programm by yourself then please download
-[stack](https://docs.haskellstack.org/en/v1.9.3/maintainers/releases/).
+[stack](https://docs.haskellstack.org/en/v1.9.3/install_and_upgrade/).
 > After installing stack and having downloaded this project go to the
 directory containing the project `weather-project` and enter the 
 following commands:
