@@ -41,7 +41,7 @@ Usage: weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r r
   -d LINK     --chart=LINK      create a diagram\
   -t          --test            create a diagram based on test set\
   -r REGIONS  --region=REGIONS  the name of a region\
-  -h          --help            Show this help message\
+  -h          --help            Show this help message
 
 > First of all, you can run this program by generating the csv file
 'moving-average-weather-data.csv' as well as the htmlfile 
