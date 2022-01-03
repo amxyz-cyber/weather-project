@@ -1,0 +1,112 @@
+{-# LANGUAGE OverloadedStrings, BlockArguments, ScopedTypeVariables #-}
+
+module Main where
+
+import qualified Lib as L
+import qualified Data.Map as Map
+import qualified Data.ByteString.Lazy as BL
+import Control.Monad.IO.Class
+import qualified System.Exit as Exit
+import qualified Data.Text as T
+import Control.Monad.HT
+
+
+main :: IO ()
+main = do
+    myData <- L.getMyCSV
+    res <- L.parseArgs
+    putStrLn $ show res
+    checkArguments res myData 							
+    
+    where
+        checkFilePaths p1 p2 t1 t2 = case (p1,p2) of
+                    (True,True) -> putStrLn "both files exist"
+                    (False,False) -> Exit.die $ "couldn't find any files"
+                    (_,False) ->  Exit.die $ "please specify path containing " ++ t2
+                    _ ->  Exit.die $ "please specify path containing " ++ t1
+                    
+        checkNewFile p1 t1 fileType = case p1 of
+                    True -> putStrLn $ "The new " ++fileType++ " file " ++ t1 ++ " has been created."
+                    False -> Exit.die $ "couldn't find any files"
+        
+        checkMaps m g a tvReg1 tvReg2 = do
+            m' <- L.getTVar m
+            g' <- L.getTVar g
+            a' <- L.getTVar a
+            r1 <- L.getTVar tvReg1
+            r2 <- L.getTVar tvReg2
+            let lenM = Map.size m'
+                lenG = Map.size g'
+                lenA = Map.size a'
+            case (lenM>0,lenG>0,lenA>0) of
+                (True,True,True) -> putStrLn $ "Files were parsed successfully:"++"\n"++ "Length "++(T.unpack r1)++" data: "++(show lenG)++"\n"++ "Length"++(T.unpack r2)++"data: "++(show lenM)++"\n"++ "Length moving average data: "++(show lenA)
+                (_,_,_) -> Exit.die "Data could not be retrieved from files" 
+        
+        getTitle iMA min max size reg1 reg2 = T.pack $ (show iMA)++"-year Moving averages" ++"\n"++"Comparison of The Average Temprature Trends in "++(show $ T.toUpper reg1)++ " vs. "++(show $ T.toUpper reg2) ++"\n"++ " Between "++(show min)++" And "++(show max)++"\n"++"n="++(show size)		
+        getTestTitle iMA min max size = T.pack $ (show iMA)++"-year Moving Averages" ++"\n"++"Comparison of The Global and Average Temprature Trends in Milan" ++"\n"++ " Between "++(show min)++" And "++(show max)++"\n"++"n="++(show size)
+        
+        auxDiagram dat task fileType = do
+			let L.MyWeatherProject{L.pathMyChart=tchart,L.avgData=mapAVG,L.xAxisStep=step, L.linkCSVFile=tvLink,L.region1=tvReg1,L.region2=tvReg2,L.movingAverageTime=ma,L.pathCSV=cp } = dat
+			map <- L.getTVar mapAVG
+			link <- L.getTVar tvLink
+			reg1 <- L.getTVar tvReg1
+			reg2 <- L.getTVar tvReg2
+			fhtml <- L.getTVar tchart
+			let max = L.getPair $ Map.findMax map
+			let	min = L.getPair $ Map.findMin map
+			let	size = Map.size map
+			let	htmlFile = L.setFilePath cp fhtml
+			title <- case task of
+						L.TestData -> do
+							let	title = getTestTitle ma min max size
+							return title
+						_ -> do
+							let	title = getTitle ma min max size reg1 reg2
+							return title
+			L.getDiagram htmlFile min max step link title
+			existsHTML <- L.doesNameExist htmlFile
+			checkNewFile existsHTML htmlFile fileType
+			return ()
+        
+        auxCSVs dat place1 place2 fileType = do
+			let L.MyWeatherProject{L.pathCSVGlobal=cg,L.pathCSVMilan=cm,L.pathCSV=cp,L.globalData=mapGlobal,L.milanData=mapMilan,L.avgData=mapAVG,L.region1=tvReg1,L.region2=tvReg2,L.pathMyCSV=mycsv} = dat
+			putStrLn "Verifying csv files ..."
+		
+			cg' <- L.getTVar cg
+			cm' <- L.getTVar cm
+			cmy <- L.getTVar mycsv
+					
+			let csvGlobalFile = L.setFilePath cp cg'
+			let csvMilanFile = L.setFilePath cp cm'
+			let	csvMovingAverageFile = L.setFilePath cp cmy
+					
+			existsCsvGlobal <- L.doesNameExist csvGlobalFile
+			existsCsvMilan <- L.doesNameExist csvMilanFile
+			checkFilePaths existsCsvGlobal existsCsvMilan place1 place2
+			csvGlobal <- BL.readFile csvGlobalFile
+			csvMilan <- BL.readFile csvMilanFile
+			L.parsecsv' csvMilan mapMilan
+			L.parsecsv' csvGlobal mapGlobal
+			L.loopThroughData mapGlobal mapMilan mapAVG
+			checkMaps mapMilan mapGlobal mapAVG tvReg1 tvReg2
+			L.writeToCSV csvMovingAverageFile mapAVG tvReg1 tvReg2
+			existsMACsv <- L.doesNameExist csvMovingAverageFile
+			checkNewFile existsMACsv cmy fileType
+			return ()
+					
+		
+		
+        checkArguments res dat = do
+			case res of
+				L.TestData -> do
+					-- csv
+					auxCSVs dat "global temperatures" "temperatures for Milan" "csv"
+					
+					-- diagram
+					auxDiagram dat (L.TestData) "html"
+				L.UserData l -> do
+					let L.MyWeatherProject{L.region1=tvReg1,L.region2=tvReg2} = dat
+					L.setArguments l dat
+					
+					
+				

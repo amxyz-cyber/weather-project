@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed"></script>
+</head>
+<body>
+<div id="vis"></div>
+<script type="text/javascript">
+  var spec = {"height":800,"mark":"line","data":{"url":"https://raw.githubusercontent.com/amxyz-cyber/data/8042057626ab000a5fc83ea95ac7d770570853fc/moving-average-weather-data.csv","format":{"type":"csv"}},"width":1600,"$schema":"https://vega.github.io/schema/vega-lite/v4.json","title":["10-year Moving Averages","Comparison of The Global and The Average Temprature Trends in  Milan"," Between 1759 And 2013","n=255"],"encoding":{"color":{"field":"data","scale":{"scheme":"viridis"},"type":"nominal","legend":{"title":"DATA"}},"x":{"field":"year","type":"temporal","axis":{"title":"YEAR"}},"y":{"field":"10-year_MA","scale":{"zero":false},"type":"quantitative","axis":{"title":"Temperature in Celcius"}}},"background":"rgba(0, 0, 0, 0.05)"};
+  vegaEmbed('#vis', spec).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+</body>
+</html>

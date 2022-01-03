@@ -1,0 +1,313 @@
+year,10-year_MA,data
+1858,14.176999,San Francisco
+1859,14.136,San Francisco
+1860,14.136999,San Francisco
+1861,14.186,San Francisco
+1862,14.248001,San Francisco
+1863,14.250998,San Francisco
+1864,14.370999,San Francisco
+1865,14.382998,San Francisco
+1866,14.440001,San Francisco
+1867,14.408002,San Francisco
+1868,14.414,San Francisco
+1869,14.5,San Francisco
+1870,14.538,San Francisco
+1871,14.483999,San Francisco
+1872,14.504001,San Francisco
+1873,14.507001,San Francisco
+1874,14.398,San Francisco
+1875,14.4419985,San Francisco
+1876,14.418999,San Francisco
+1877,14.476,San Francisco
+1878,14.488001,San Francisco
+1879,14.450999,San Francisco
+1880,14.354001,San Francisco
+1881,14.358999,San Francisco
+1882,14.254001,San Francisco
+1883,14.201001,San Francisco
+1884,14.1970005,San Francisco
+1885,14.226001,San Francisco
+1886,14.240001,San Francisco
+1887,14.175001,San Francisco
+1888,14.208,San Francisco
+1889,14.269,San Francisco
+1890,14.352,San Francisco
+1891,14.358999,San Francisco
+1892,14.406,San Francisco
+1893,14.353,San Francisco
+1894,14.328001,San Francisco
+1895,14.218,San Francisco
+1896,14.182001,San Francisco
+1897,14.125,San Francisco
+1898,14.032,San Francisco
+1899,13.954999,San Francisco
+1900,14.014,San Francisco
+1901,14.002001,San Francisco
+1902,14.004001,San Francisco
+1903,14.076001,San Francisco
+1904,14.146001,San Francisco
+1905,14.190001,San Francisco
+1906,14.249001,San Francisco
+1907,14.302,San Francisco
+1908,14.325999,San Francisco
+1909,14.326999,San Francisco
+1910,14.279999,San Francisco
+1911,14.192001,San Francisco
+1912,14.18,San Francisco
+1913,14.205999,San Francisco
+1914,14.189,San Francisco
+1915,14.18,San Francisco
+1916,14.059999,San Francisco
+1917,14.032001,San Francisco
+1918,14.045001,San Francisco
+1919,14.0,San Francisco
+1920,13.955,San Francisco
+1921,14.033,San Francisco
+1922,13.998999,San Francisco
+1923,13.974001,San Francisco
+1924,13.950999,San Francisco
+1925,13.955,San Francisco
+1926,14.108,San Francisco
+1927,14.126001,San Francisco
+1928,14.143999,San Francisco
+1929,14.209,San Francisco
+1930,14.261999,San Francisco
+1931,14.330999,San Francisco
+1932,14.394,San Francisco
+1933,14.373999,San Francisco
+1934,14.495,San Francisco
+1935,14.473,San Francisco
+1936,14.472,San Francisco
+1937,14.483999,San Francisco
+1938,14.4869995,San Francisco
+1939,14.542999,San Francisco
+1940,14.629999,San Francisco
+1941,14.634999,San Francisco
+1942,14.631,San Francisco
+1943,14.710001,San Francisco
+1944,14.595999,San Francisco
+1945,14.625,San Francisco
+1946,14.495,San Francisco
+1947,14.509999,San Francisco
+1948,14.44,San Francisco
+1949,14.349001,San Francisco
+1950,14.3029995,San Francisco
+1951,14.211,San Francisco
+1952,14.202001,San Francisco
+1953,14.172,San Francisco
+1954,14.173001,San Francisco
+1955,14.106,San Francisco
+1956,14.131,San Francisco
+1957,14.139,San Francisco
+1958,14.315001,San Francisco
+1959,14.464,San Francisco
+1960,14.457001,San Francisco
+1961,14.515999,San Francisco
+1962,14.5269985,San Francisco
+1963,14.504,San Francisco
+1964,14.51,San Francisco
+1965,14.55,San Francisco
+1966,14.616,San Francisco
+1967,14.607,San Francisco
+1968,14.532001,San Francisco
+1969,14.443998,San Francisco
+1970,14.460999,San Francisco
+1971,14.385,San Francisco
+1972,14.3880005,San Francisco
+1973,14.427,San Francisco
+1974,14.444,San Francisco
+1975,14.412,San Francisco
+1976,14.410001,San Francisco
+1977,14.422999,San Francisco
+1978,14.453,San Francisco
+1979,14.501001,San Francisco
+1980,14.499001,San Francisco
+1981,14.631999,San Francisco
+1982,14.606999,San Francisco
+1983,14.656,San Francisco
+1984,14.712,San Francisco
+1985,14.753,San Francisco
+1986,14.781,San Francisco
+1987,14.813001,San Francisco
+1988,14.825,San Francisco
+1989,14.770999,San Francisco
+1990,14.7699995,San Francisco
+1991,14.698,San Francisco
+1992,14.851,San Francisco
+1993,14.841001,San Francisco
+1994,14.765001,San Francisco
+1995,14.872999,San Francisco
+1996,14.928999,San Francisco
+1997,15.009,San Francisco
+1998,14.939,San Francisco
+1999,14.935,San Francisco
+2000,14.964,San Francisco
+2001,15.039,San Francisco
+2002,14.986,San Francisco
+2003,15.032001,San Francisco
+2004,15.148001,San Francisco
+2005,15.134,San Francisco
+2006,15.08,San Francisco
+2007,14.999001,San Francisco
+2008,15.066,San Francisco
+2009,15.127001,San Francisco
+2010,15.092001,San Francisco
+2011,15.017001,San Francisco
+2012,15.022,San Francisco
+2013,15.102,San Francisco
+1858,6.1969995,Milan
+1859,6.22,Milan
+1860,6.17,Milan
+1861,6.2660003,Milan
+1862,6.313,Milan
+1863,6.4660006,Milan
+1864,6.429,Milan
+1865,6.56,Milan
+1866,6.6130004,Milan
+1867,6.6399994,Milan
+1868,6.7829995,Milan
+1869,6.7439995,Milan
+1870,6.825,Milan
+1871,6.7419996,Milan
+1872,6.7279997,Milan
+1873,6.7089996,Milan
+1874,6.7619996,Milan
+1875,6.708,Milan
+1876,6.668,Milan
+1877,6.667001,Milan
+1878,6.5880003,Milan
+1879,6.5180006,Milan
+1880,6.5959997,Milan
+1881,6.6450005,Milan
+1882,6.609,Milan
+1883,6.5010004,Milan
+1884,6.5080004,Milan
+1885,6.519,Milan
+1886,6.509,Milan
+1887,6.394,Milan
+1888,6.3310003,Milan
+1889,6.321,Milan
+1890,6.2160006,Milan
+1891,6.1610003,Milan
+1892,6.1330004,Milan
+1893,6.21,Milan
+1894,6.2200003,Milan
+1895,6.1829996,Milan
+1896,6.125,Milan
+1897,6.2650003,Milan
+1898,6.422,Milan
+1899,6.565,Milan
+1900,6.686,Milan
+1901,6.6980004,Milan
+1902,6.7,Milan
+1903,6.6730003,Milan
+1904,6.7310004,Milan
+1905,6.739,Milan
+1906,6.814,Milan
+1907,6.778,Milan
+1908,6.6940002,Milan
+1909,6.5820007,Milan
+1910,6.511,Milan
+1911,6.6349998,Milan
+1912,6.6049995,Milan
+1913,6.6169996,Milan
+1914,6.5450006,Milan
+1915,6.5479994,Milan
+1916,6.54,Milan
+1917,6.4690003,Milan
+1918,6.475,Milan
+1919,6.4829993,Milan
+1920,6.5870004,Milan
+1921,6.62,Milan
+1922,6.636,Milan
+1923,6.679,Milan
+1924,6.693,Milan
+1925,6.7139997,Milan
+1926,6.768,Milan
+1927,6.889,Milan
+1928,6.963,Milan
+1929,7.004,Milan
+1930,6.975,Milan
+1931,6.8529997,Milan
+1932,6.873,Milan
+1933,6.8030005,Milan
+1934,6.8810005,Milan
+1935,6.901,Milan
+1936,6.875,Milan
+1937,6.864,Milan
+1938,6.826,Milan
+1939,6.8149996,Milan
+1940,6.693,Milan
+1941,6.655,Milan
+1942,6.6809998,Milan
+1943,6.818,Milan
+1944,6.725,Milan
+1945,6.8090005,Milan
+1946,6.835,Milan
+1947,6.896,Milan
+1948,6.957,Milan
+1949,7.09,Milan
+1950,7.2579994,Milan
+1951,7.3669996,Milan
+1952,7.3770003,Milan
+1953,7.3410006,Milan
+1954,7.3389993,Milan
+1955,7.2829995,Milan
+1956,7.152999,Milan
+1957,7.0990005,Milan
+1958,7.065,Milan
+1959,7.0429993,Milan
+1960,6.967,Milan
+1961,7.047,Milan
+1962,7.0099998,Milan
+1963,6.896,Milan
+1964,6.975,Milan
+1965,6.908,Milan
+1966,7.0380006,Milan
+1967,7.05,Milan
+1968,7.018,Milan
+1969,6.912,Milan
+1970,6.8879995,Milan
+1971,6.8129997,Milan
+1972,6.829,Milan
+1973,6.893,Milan
+1974,6.8760004,Milan
+1975,6.9700003,Milan
+1976,6.9600005,Milan
+1977,6.919,Milan
+1978,6.873,Milan
+1979,6.905,Milan
+1980,6.8849998,Milan
+1981,6.8649993,Milan
+1982,6.9409995,Milan
+1983,6.9989996,Milan
+1984,6.9339995,Milan
+1985,6.8949995,Milan
+1986,6.898999,Milan
+1987,6.9329996,Milan
+1988,7.0549994,Milan
+1989,7.1539993,Milan
+1990,7.308,Milan
+1991,7.3409996,Milan
+1992,7.368,Milan
+1993,7.3620005,Milan
+1994,7.5519996,Milan
+1995,7.6080003,Milan
+1996,7.6019998,Milan
+1997,7.701,Milan
+1998,7.713,Milan
+1999,7.6910005,Milan
+2000,7.707,Milan
+2001,7.762,Milan
+2002,7.801,Milan
+2003,7.9130006,Milan
+2004,7.8480005,Milan
+2005,7.8380003,Milan
+2006,7.947001,Milan
+2007,7.9690003,Milan
+2008,7.9830003,Milan
+2009,8.030001,Milan
+2010,7.922,Milan
+2011,8.007,Milan
+2012,7.997,Milan
+2013,7.946,Milan
