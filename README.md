@@ -96,7 +96,7 @@ depending on the architecture. For example, for 'aarch64' you'll find the
 binary in: '.stack-work/dist/aarch64-linux/Cabal-3.2.1.0/build/weather-project-exe/weather-project-exe'
 
 5. To finally install the binary, you'll use the following command:\
-> `stack install` 
+`stack install` 
 > This command copies the binary to your local bin folder, for example:
 '/home/username/.local/bin'. You can rename the binary by simply using
 the move command 'mv' to `weatherComparator`. This will work, too.
