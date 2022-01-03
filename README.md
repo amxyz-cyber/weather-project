@@ -33,29 +33,29 @@ average temperature has been rising, especially since around 1945.
 the moving averages based on two csv files that need to have the 
 headings `year` and `avg_temp` (see examples in the [data folder](https://github.com/amxyz-cyber/weather-project/tree/master/data)).
 
-> Usage: weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]
-  -v          --verbose         chatty output on stderr
-  -V, -?      --version         show version number
-  -q          --quit            end program
-  -c FILES    --csv=FILES       csv file for temperature comparison
-  -d LINK     --chart=LINK      create a diagram
-  -t          --test            create a diagram based on test set
-  -r REGIONS  --region=REGIONS  the name of a region
-  -h          --help            Show this help message
+Usage: weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]\
+  -v          --verbose         chatty output on stderr\
+  -V, -?      --version         show version number\
+  -q          --quit            end program\
+  -c FILES    --csv=FILES       csv file for temperature comparison\
+  -d LINK     --chart=LINK      create a diagram\
+  -t          --test            create a diagram based on test set\
+  -r REGIONS  --region=REGIONS  the name of a region\
+  -h          --help            Show this help message\
 
 > First of all, you can run this program by generating the csv file
 'moving-average-weather-data.csv' as well as the htmlfile 
-'moving-averages.html' containing the diagram by using the testset:
+'moving-averages.html' containing the diagram by using the testset:\
 `weatherComparator -t -v`
 
 > Another option is to generate the csv file 
-'moving-average-weather-data.csv' based on your data, for example:
+'moving-average-weather-data.csv' based on your data, for example:\
 `weatherComparator -v -r "San Francisco" -r Milan -c results-milan.csv -c results-sanfrancisco.csv`
 
 > The third option is to generate the html file based on your csv file 
 containing the moving averages. In order to generate the html file your
 csv file needs to contain the headings `year`, `10-year_MA` as well as
- `data`. Example:
+ `data`. Example:\
 `weatherComparator -v -r "San Francisco" -r Milan -c moving-average-weather-data.csv -d https://raw.githubusercontent.com/amxyz-cyber/data/main/moving-average-weather-data2.csv`
 
 > Hint: You can leave out the regions but then the default values 'region1'
@@ -79,17 +79,17 @@ following commands:
 2. `stack build`
 
 3. If Stack complains about that it can't find the lts build or any link
-provided in packages.yaml is invalid then you need to upgrade stack first:
+provided in packages.yaml is invalid then you need to upgrade stack first:\
 `stack upgrade`
 
 4. After compiling the project you can run the program by entering the
-following command:
+following command:\
 `stack exec weather-project-exe`
 
 > Note, that the stack command should be available globally. If you can
 use stack only locally, i.e. `./stack` then you need to export the path
-to the folder containing its binary, for example:
-> $ `export PATH="${PATH}:/home/username/.local/bin"`
+to the folder containing its binary, for example:\
+$ `export PATH="${PATH}:/home/username/.local/bin"`
 
 > The compiled binary will be placed in a subfolder of this project 
 depending on the architecture. For example, for 'aarch64' you'll find the
