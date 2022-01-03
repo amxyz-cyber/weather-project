@@ -34,7 +34,7 @@ the moving averages based on two csv files that need to have the
 headings `year` and `avg_temp` (see examples in the [data folder](https://github.com/amxyz-cyber/weather-project/tree/master/data)).
 
 Usage: weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]\
-  -v          --verbose         chatty output on stderr\
+  -v          --verbose &emsp;  chatty output on stderr\
   -V, -?      --version         show version number\
   -q          --quit            end program\
   -c FILES    --csv=FILES       csv file for temperature comparison\
