@@ -27,6 +27,7 @@ average temperature has been rising, especially since around 1945.
 
 ## Review
 * [Udacity Review ](https://github.com/amxyz-cyber/weather-project/blob/master/submission/review-project01.pdf)  
+* [Go to submitted files](https://github.com/amxyz-cyber/weather-project/tree/master/submission)
 
 ## WeatherComparator
 > The `WeatherComparator` is a program written in Haskell. It creates 
@@ -53,14 +54,14 @@ Usage: weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r r
 
 > First of all, you can run this program by generating the csv file
 'moving-average-weather-data.csv' as well as the htmlfile 
-'moving-averages.html' containing the diagram by using the testset:\
+'moving-averages.html' containing the diagram by using the testset:
 ```bash
 weatherComparator -t -v
 
 ```
 
 > Another option is to generate the csv file 
-'moving-average-weather-data.csv' based on your data, for example:\
+'moving-average-weather-data.csv' based on your data, for example:
 ```bash
 weatherComparator -v -r "San Francisco" -r Milan -c results-milan.csv -c results-sanfrancisco.csv
 ```
@@ -68,7 +69,7 @@ weatherComparator -v -r "San Francisco" -r Milan -c results-milan.csv -c results
 > The third option is to generate the html file based on your csv file 
 containing the moving averages. In order to generate the html file your
 csv file needs to contain the headings `year`, `10-year_MA` as well as
- `data`. Example:\
+ `data`. Example:
 
 ```bash
 weatherComparator -v -r "San Francisco" -r Milan -c moving-average-weather-data.csv -d https://raw.githubusercontent.com/amxyz-cyber/data/main/moving-average-weather-data2.csv
@@ -82,7 +83,7 @@ and 'region2' will be used instead.
 > This repositary currently contains binaries for the Raspberry Pi 
 'aarch64' architecture as well as ia64 (https://github.com/amxyz-cyber/weather-project/tree/master/binaries).
 You will also need the haskell-platform which basically includes the
-ghc-compiler and its dependencies.\
+ghc-compiler and its dependencies.
 
 `weatherComparator` or `./weatherComparator`
 
@@ -100,7 +101,7 @@ provided in packages.yaml is invalid then you need to upgrade stack first:\
 `stack upgrade`
 
 4. After compiling the project you can run the program by entering the
-following command:\
+following command:
 ```bash
 stack exec weather-project-exe
 
@@ -108,7 +109,7 @@ stack exec weather-project-exe
 
 > Note that if you can't use the stack command globally, i.e. you can
 use stack only locally `./stack` then you can export the path
-to the folder containing its binary, for example:\
+to the folder containing its binary, for example:
 
 ```bash
 $ export PATH="${PATH}:/home/username/.local/bin"
@@ -124,7 +125,7 @@ binary in a path similar to this:\
 `stack install` 
 > This command copies the binary to your local bin folder such as\
 **/home/username/.local/bin**\
-You can rename the binary by simply using the move command:\
+You can rename the binary by simply using the move command:
 ```bash
 mv weather-project-exe weatherComparator
 
