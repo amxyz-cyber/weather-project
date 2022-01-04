@@ -54,17 +54,26 @@ Usage: weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r r
 > First of all, you can run this program by generating the csv file
 'moving-average-weather-data.csv' as well as the htmlfile 
 'moving-averages.html' containing the diagram by using the testset:\
-`weatherComparator -t -v`
+```bash
+weatherComparator -t -v
+
+```
 
 > Another option is to generate the csv file 
 'moving-average-weather-data.csv' based on your data, for example:\
-`weatherComparator -v -r "San Francisco" -r Milan -c results-milan.csv -c results-sanfrancisco.csv`
+```bash
+weatherComparator -v -r "San Francisco" -r Milan -c results-milan.csv -c results-sanfrancisco.csv
+```
 
 > The third option is to generate the html file based on your csv file 
 containing the moving averages. In order to generate the html file your
 csv file needs to contain the headings `year`, `10-year_MA` as well as
  `data`. Example:\
-`weatherComparator -v -r "San Francisco" -r Milan -c moving-average-weather-data.csv -d https://raw.githubusercontent.com/amxyz-cyber/data/main/moving-average-weather-data2.csv`
+
+```bash
+weatherComparator -v -r "San Francisco" -r Milan -c moving-average-weather-data.csv -d https://raw.githubusercontent.com/amxyz-cyber/data/main/moving-average-weather-data2.csv
+
+```
 
 > Hint: You can leave out the regions but then the default values 'region1'
 and 'region2' will be used instead.
@@ -92,12 +101,19 @@ provided in packages.yaml is invalid then you need to upgrade stack first:\
 
 4. After compiling the project you can run the program by entering the
 following command:\
-`stack exec weather-project-exe`
+```bash
+stack exec weather-project-exe
+
+```
 
 > Note that if you can't use the stack command globally, i.e. you can
 use stack only locally `./stack` then you can export the path
 to the folder containing its binary, for example:\
-$ `export PATH="${PATH}:/home/username/.local/bin"`
+
+```bash
+$ export PATH="${PATH}:/home/username/.local/bin"
+
+``` 
 
 > The compiled binary will be placed in a subfolder of this project 
 depending on the architecture. For example, for 'aarch64' you'll find the
@@ -109,7 +125,10 @@ binary in a path similar to this:\
 > This command copies the binary to your local bin folder such as\
 **/home/username/.local/bin**\
 You can rename the binary by simply using the move command:\
-`mv weather-project-exe weatherComparator`. 
+```bash
+mv weather-project-exe weatherComparator
+
+```
 > This will work, too.
 
 
