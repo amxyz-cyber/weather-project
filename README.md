@@ -39,10 +39,10 @@ binary `weatherComparator` together with the `data` folder are in the
 same directory. The csv files of both regions as well as the csv file
 containing the moving averages need to be in the [`data`](https://github.com/amxyz-cyber/weather-project/tree/master/data) 
 folder. That's why you'll only need to enter the names of the csv files 
-but not their paths.\
+but not their paths.
 
 
-**Usage**:
+### Usage
 ```bash
 weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]
 ```
