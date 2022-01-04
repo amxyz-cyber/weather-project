@@ -44,7 +44,7 @@ but not their paths.
 
 ### Usage
 ```bash
-weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]
+$ weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]
 ```
 | Option | Argument |  Long Option   | Argument Description               |
 |:------:|:---------|:---------------|:-----------------------------------|
@@ -61,14 +61,14 @@ weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1]
 'moving-average-weather-data.csv' as well as the htmlfile 
 'moving-averages.html' containing the diagram by using the testset:
 ```bash
-weatherComparator -t -v
+$ weatherComparator -t -v
 
 ```
 
 > Another option is to generate the csv file 
 'moving-average-weather-data.csv' based on your data, for example:
 ```bash
-weatherComparator -v -r "San Francisco" -r Milan -c results-milan.csv -c results-sanfrancisco.csv
+$ weatherComparator -v -r "San Francisco" -r Milan -c results-milan.csv -c results-sanfrancisco.csv
 ```
 
 > The third option is to generate the html file based on your csv file 
@@ -77,7 +77,7 @@ csv file needs to contain the headings `year`, `10-year_MA` as well as
  `data`. Example:
 
 ```bash
-weatherComparator -v -r "San Francisco" -r Milan -c moving-average-weather-data.csv -d https://raw.githubusercontent.com/amxyz-cyber/data/main/moving-average-weather-data2.csv
+$ weatherComparator -v -r "San Francisco" -r Milan -c moving-average-weather-data.csv -d https://raw.githubusercontent.com/amxyz-cyber/data/main/moving-average-weather-data2.csv
 
 ```
 
@@ -86,7 +86,7 @@ and 'region2' will be used instead.
 
 ### Running the program:
 > This repositary currently contains binaries for the Raspberry Pi 
-'aarch64' architecture as well as ia64 (https://github.com/amxyz-cyber/weather-project/tree/master/binaries).
+[**aarch64**](https://github.com/amxyz-cyber/weather-project/tree/master/binaries/aarch64) architecture as well as [**ia64**](https://github.com/amxyz-cyber/weather-project/tree/master/binaries/x86_64-linux).
 You will also need the haskell-platform which basically includes the
 ghc-compiler and its dependencies.
 
@@ -99,16 +99,16 @@ ghc-compiler and its dependencies.
 directory containing the project `weather-project` and enter the 
 following commands:
 
-2. `stack build`
+2. `$ stack build`
 
 3. If Stack complains about that it can't find the lts build or any link
 provided in packages.yaml is invalid then you need to upgrade stack first:\
-`stack upgrade`
+`$ stack upgrade`
 
 4. After compiling the project you can run the program by entering the
 following command:
 ```bash
-stack exec weather-project-exe
+$ stack exec weather-project-exe
 
 ```
 
@@ -127,12 +127,12 @@ binary in a path similar to this:\
 **.stack-work/dist/aarch64-linux/Cabal-3.2.1.0/build/weather-project-exe/weather-project-exe**
 
 5. To finally install the binary, you'll use the following command:\
-`stack install` 
+`$ stack install` 
 > This command copies the binary to your local bin folder such as\
 **/home/username/.local/bin**\
 You can rename the binary by simply using the move command:
 ```bash
-mv weather-project-exe weatherComparator
+$ mv weather-project-exe weatherComparator
 
 ```
 > This will work, too.
