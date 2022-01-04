@@ -32,25 +32,30 @@ average temperature has been rising, especially since around 1945.
 ## WeatherComparator
 > The `WeatherComparator` is a program written in Haskell. It creates 
 the moving averages based on two csv files that need to have the 
-headings `year` and `avg_temp` (see examples in the [data folder](https://github.com/amxyz-cyber/weather-project/tree/master/data)).
+headings `year` and `avg_temp` (see examples in the [data folder](https://github.com/amxyz-cyber/weather-project/tree/master/data).
 Please note that the source csv files may contain additional headings but
 these two are a must. What's more, this program will only work if the
 binary `weatherComparator` together with the `data` folder are in the 
 same directory. The csv files of both regions as well as the csv file
-containing the moving averages need to be in the `data` folder. That's
-why you'll only need to enter the name of the csv files but not their
-paths.
+containing the moving averages need to be in the [`data`](https://github.com/amxyz-cyber/weather-project/tree/master/data) 
+folder. That's why you'll only need to enter the names of the csv files 
+but not their paths.\
 
 
-Usage: weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]\
-  -v          &emsp;&emsp; --verbose 		&emsp;&emsp;  chatty output on stderr\
-  -V, -?      &emsp;&emsp; --version 		&emsp;&emsp;        show version number\
-  -q          &emsp;&emsp; --quit    		&emsp;&emsp;        end program\
-  -c FILES    &emsp;&emsp; --csv=FILES 		&emsp;&emsp;      csv file for temperature comparison\
-  -d LINK     &emsp;&emsp; --chart=LINK  	&emsp;&emsp;    create a diagram\
-  -t          &emsp;&emsp; --test            &emsp;&emsp; create a diagram based on test set\
-  -r REGIONS  &emsp;&emsp; --region=REGIONS  &emsp;&emsp; the name of a region\
-  -h          &emsp;&emsp; --help            &emsp;&emsp; Show this help message
+**Usage**:\
+```bash
+weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]
+```
+| Option | Argument |  Long Option   | Argument Description               |
+|:------:|:---------|:---------------|:-----------------------------------|
+|-v      | 			|--verbose	     |chatty output on stderr             |
+|-V, -?  |          |--version 	     |show version number                 |
+|-q      |          |--quit    	     |end program                         |
+|-c      |FILE      |--csv=FILE      |csv file for temperature comparison |
+|-d      |LINK      |--chart=LINK    |create a diagram                    |
+|-t      |          |--test          |create a diagram based on test set  |
+|-       |REGION    |--region=REGION |the name of a region                |
+|-h      |          |--help          |Show this help message              |
 
 > First of all, you can run this program by generating the csv file
 'moving-average-weather-data.csv' as well as the htmlfile 
