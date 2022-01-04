@@ -42,7 +42,7 @@ folder. That's why you'll only need to enter the names of the csv files
 but not their paths.\
 
 
-**Usage**:\
+**Usage**:
 ```bash
 weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]
 ```
@@ -54,7 +54,7 @@ weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1]
 |-c      |FILE      |--csv=FILE      |csv file for temperature comparison |
 |-d      |LINK      |--chart=LINK    |create a diagram                    |
 |-t      |          |--test          |create a diagram based on test set  |
-|-       |REGION    |--region=REGION |the name of a region                |
+|-r      |REGION    |--region=REGION |the name of a region                |
 |-h      |          |--help          |Show this help message              |
 
 > First of all, you can run this program by generating the csv file
