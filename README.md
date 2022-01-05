@@ -46,9 +46,9 @@ but not their paths.
 ```bash
 $ weatherComparator [-h] [-c csv-file1] [-c csv-file2] [-d link] [-t] [-r region1] [-r region2]
 ```
-| Option | Argument |  Long Option   | Argument Description               |
+| Option | Argument |  Long Option   | Option Description                 |
 |:------:|:---------|:---------------|:-----------------------------------|
-|-v      | 			|--verbose	     |chatty output on stderr             |
+|-v      | 			      |--verbose	      |chatty output on stderr             |
 |-V, -?  |          |--version 	     |show version number                 |
 |-q      |          |--quit    	     |end program                         |
 |-c      |FILE      |--csv=FILE      |csv file for temperature comparison |
