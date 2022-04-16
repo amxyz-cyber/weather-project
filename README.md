@@ -3,7 +3,7 @@
 
 ## Dataset
 The datasets, [results-milan.csv](https://github.com/amxyz-cyber/weather-project/blob/master/data/results-milan.csv) 
-and [results-globa.csv](https://github.com/amxyz-cyber/weather-project/blob/master/data/results-global.csv) 
+and [results-global.csv](https://github.com/amxyz-cyber/weather-project/blob/master/data/results-global.csv) 
 were originally provided by Udacity. The datasets include 266 global 
 temperatures from 1750 until 2015 as well as 271 temperatures of Milan 
 collected between 1743 and 2013. The main features are of course the 
